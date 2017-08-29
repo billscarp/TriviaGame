@@ -1,8 +1,10 @@
- window.onload = function () 
+
     // I'm going to start by writing Q&A  //
 
-  
-    var questions =
+    $( document ).ready(function() {
+    
+      var questions =
+
     [
       {
         question: "What is jQuery?",
@@ -33,19 +35,14 @@
         choices: ["A celebrity ball", "Going to a concert", "The Opera", "An event represents the precise moment when something happens. "],
         answer: 4
         }
+  ]
+        console.log("questions");
+    
+  
+});
 
-];   // Trying this out //
+  
+  // Trying this out //
 
-        var container = document.getElementById('container');
-        for (var i = 0; i < questions.length; i++) {
-            var questionContainer = document.createElement('DIV');
-            questionContainer.textContent = questions[i].question;
 
-            var options = questions[i].choices;
-            for (var opt in options) {
-                //create radiobutton
-                //append radiobutton to a div 
-            }
-            container.appendChild(questionContainer);
-        
-        });
+    

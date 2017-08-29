@@ -1,4 +1,4 @@
-!-- Add H1 center aligned with title of quiz
+<!-- Add H1 center aligned with title of quiz
      set up a radio button with H3 start to let user know to click it.
      As soon as the button is clicked, a TIME REMAINING contdown will begin
      The first question will appear along with four choices
@@ -9,15 +9,20 @@
      Time remaining: 0 seconds and Out of Time is shown.
 
 -->
+
 <!DOCTYPE html>
 <html lang="en US">
 
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="trivia.css">
+<script src="assets/javascript/app.js"></script>
 <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -29,6 +34,8 @@
 </div>
 
 <div id="results"></div>
+
+<span id="count">10</span> seconds...</p>
 
 
 </body>
