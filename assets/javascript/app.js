@@ -75,4 +75,6 @@
     run();
   
 // So far so good timer-wise.  Stil more to do. //
+
+var quiz = $('#quiz');
    
