@@ -1,11 +1,9 @@
 
 // I'm going to start by writing Q&A  //
 
+$( document ).ready()
 
-
-var questions =
-
-  [
+var quiz = [
     {
       question: "What is jQuery?",
       choices: ["a chewing gum", "a search engine", "a travel agency", " A JavaScript library"],
@@ -20,7 +18,7 @@ var questions =
 
     {
       question: "What is Traversing?",
-      choices: ["A gener operation", "Two songs mixed together", "Selects Elements based on other Elements.", "A new Reality show."],
+      choices: ["A gender operation", "Two songs mixed together", "Selects Elements based on other Elements.", "A new Reality show."],
       answer: 3
     },
 
@@ -32,15 +30,39 @@ var questions =
     },
     {
       question: "What are events?",
-      choices: ["A celebrity ball", "Going to a concert", "The Opera", "An event represents the precise moment when something happens. "],
+      choices: [ "A celebrity ball", "Going to a concert", "The Opera", "An event represents the precise moment when something happens. "],
       answer: 4
     }
-  ];
+];
+$(document).ready(function(){
+  $(":button").css("background-color", "red");
+});
+
+$(document).ready(function(){
+  $("button").click(function(){
+      $("#quiz").hide();
+  });
+});
+var arrayNum = 0;
+
+$("<h1>").addClass("theQuestion").html(quiz[arrayNum].question).appendTo("body")
+
+for (i = 0; i < quiz.length; i++){
+
+  
+  $("<h3>").addClass("theAnswer").html(quiz[arrayNum].choices[i]).appendTo("body")
+  // $("#quiz").append('<h1>'+quiz[0].choices[i]+'</h1>');
+  // $("#quiz").append(quiz[0].choices[i]);
+}
 
 
 
 
-// Working on the Countdown Timer //
+  
+  
+
+
+/*// Working on the Countdown Timer //
 
 var number = 30;
 
@@ -86,4 +108,4 @@ function myTest() {
 myTest();
   
 }
-
+*/
