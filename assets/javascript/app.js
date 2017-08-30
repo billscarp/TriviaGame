@@ -1,7 +1,7 @@
 
     // I'm going to start by writing Q&A  //
-
-    $( document ).ready(function() {
+   
+   
     
       var questions =
 
@@ -39,10 +39,36 @@
         console.log("questions");
     
   
-});
 
+// Working on the Countdown Timer //
+
+  var number = 30;
   
-  // Trying this out //
-
-
+    
+    function run() {
+      intervalId = setInterval(decrement, 1000);
+    }
+   
+    function decrement() {
+   
+      number--;
+     
+      $("#Count_Down").html("<h2>" + number + "</h2>");
+     
+      if (number === 0) {
+    
+        stop();
+      
+        alert("Out of Time!");
+      }
+    }
+   
+    function stop() {
+   
+      clearInterval(intervalId);
+    }
+   
+    run();
+  
+// So far so good timer-wise.  Stil more to do. //
     
