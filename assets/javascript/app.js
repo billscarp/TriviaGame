@@ -43,7 +43,10 @@
 // Working on the Countdown Timer //
 
   var number = 30;
-  
+
+
+ 
+  //Trying to set it so the start button starts the timer//
     
     function run() {
       intervalId = setInterval(decrement, 1000);
@@ -54,6 +57,7 @@
       number--;
      
       $("#Count_Down").html("<h2>" + number + "</h2>");
+       
      
       if (number === 0) {
     
@@ -71,4 +75,4 @@
     run();
   
 // So far so good timer-wise.  Stil more to do. //
-    
+   

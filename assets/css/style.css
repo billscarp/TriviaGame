@@ -1,3 +1,39 @@
 h1 {
     text-align: center;
+    font-size: 60px;
 }
+
+* {
+    box-sizing: border-box;
+}
+
+body {     
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
+    font-size: 12px;
+    background:  url("../images/jquery.jpg") no-repeat center center fixed;
+ 
+}
+
+    
+
+#Count_Down {
+
+    align-items: center;
+    color: blue;
+
+
+}
+
+
+/*--------FOOTER----------*/
+footer {
+    background-color: rgba(255,255,255,.6);
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;   
+}
+footer a, footer a:visited {
+    font-size: 14px;
+    color: black;
+}
+
