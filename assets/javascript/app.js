@@ -1,80 +1,89 @@
 
-    // I'm going to start by writing Q&A  //
-   
-   
-    
-      var questions =
+// I'm going to start by writing Q&A  //
 
-    [
-      {
-        question: "What is jQuery?",
-        choices: ["a chewing gum", "a search engine", "a travel agency", " A JavaScript library"],
-        answer: 4
-      },
 
-      {
-        question: "What symbol is used to access jQuery?",
-        choices: ["$", "&", "*", "The symbol formally known as Prince"],
-        answer: 1
-      },
-      
+
+var questions =
+
+  [
     {
-        question: "What is Traversing?",
-        choices: ["A gener operation", "Two songs mixed together", "Selects Elements based on other Elements.", "A new Reality show."],
-        answer: 3
-        },
+      question: "What is jQuery?",
+      choices: ["a chewing gum", "a search engine", "a travel agency", " A JavaScript library"],
+      answer: 4
+    },
 
     {
+      question: "What symbol is used to access jQuery?",
+      choices: ["$", "&", "*", "The symbol formally known as Prince"],
+      answer: 1
+    },
 
-        question: "What is the .class Selector",
-        choices: ["the teahers pet", "the team captain", "Admissions registration program", "Find elements with a specific class "],
-        answer: 4
-        },
-{
-        question: "What are events?",
-        choices: ["A celebrity ball", "Going to a concert", "The Opera", "An event represents the precise moment when something happens. "],
-        answer: 4
-        }
-  ]
-        console.log("questions");
-    
-  
+    {
+      question: "What is Traversing?",
+      choices: ["A gener operation", "Two songs mixed together", "Selects Elements based on other Elements.", "A new Reality show."],
+      answer: 3
+    },
+
+    {
+
+      question: "What is the .class Selector",
+      choices: ["the teahers pet", "the team captain", "Admissions registration program", "Find elements with a specific class "],
+      answer: 4
+    },
+    {
+      question: "What are events?",
+      choices: ["A celebrity ball", "Going to a concert", "The Opera", "An event represents the precise moment when something happens. "],
+      answer: 4
+    }
+  ];
+
+
+
 
 // Working on the Countdown Timer //
 
-  var number = 30;
+var number = 30;
+
+console.log(questions[2].choices);
 
 
- 
-  //Trying to set it so the start button starts the timer//
-    
-    function run() {
-      intervalId = setInterval(decrement, 1000);
-    }
-   
-    function decrement() {
-   
-      number--;
-     
-      $("#Count_Down").html("<h2>" + number + "</h2>");
-       
-     
-      if (number === 0) {
-    
-        stop();
-      
-        alert("Out of Time!");
-      }
-    }
-   
-    function stop() {
-   
-      clearInterval(intervalId);
-    }
-   
-    run();
-  
+//Trying to set it so the start button starts the timer//
+
+function run() {
+  intervalId = setInterval(decrement, 1000);
+}
+
+function decrement() {
+
+  number--;
+
+  $("#Count_Down").html("<h2>" + number + "</h2>");
+
+
+  if (number === 0) {
+
+    stop();
+
+    alert("Out of Time!");
+  }
+}
+
+function stop() {
+
+  clearInterval(intervalId);
+}
+
+run();
+
 // So far so good timer-wise.  Stil more to do. //
 
-var quiz = $('#quiz');
-   
+// var quiz = $('#quiz');
+function myTest() {
+
+
+  $("#quiz").html(questions[2].choices[1]);
+
+myTest();
+  
+}
+
