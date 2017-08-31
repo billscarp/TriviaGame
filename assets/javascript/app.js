@@ -38,12 +38,10 @@ $(document).ready(function(){
   $(":button").css("background-color", "red");
 });
 
-$(document).ready(function(){
-  $("button").click(function(){
-      $("#quiz").hide();
-  });
-});
+
+
 var arrayNum = 0;
+
 
 $("<h1>").addClass("theQuestion").html(quiz[arrayNum].question).appendTo("body")
 
@@ -55,6 +53,10 @@ for (i = 0; i < quiz.length; i++){
   // $("#quiz").append(quiz[0].choices[i]);
 }
 
+$(document).ready(function(){ 
+
+  $("h1").hide(5000);
+});
 
 
 
