@@ -1,7 +1,6 @@
 
 // I'm going to start by writing Q&A  //
 
-$( document ).ready()
 
 // These are my questions that I want to come up on the page //
 
@@ -44,8 +43,12 @@ var quiz = [
 
 
   $(document).ready(function(){
-  $(":button").css("background-color", "red");
+  $(":button").onclick("background-color", "red");
 });
+
+
+  //(function begin (){
+    // $(".theQuestion").fadeIn()
 
 
   
