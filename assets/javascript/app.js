@@ -3,6 +3,8 @@
 
 $( document ).ready()
 
+// These are my questions that I want to come up on the page //
+
 var quiz = [
     {
       question: "What is jQuery?",
@@ -34,13 +36,64 @@ var quiz = [
       answer: 4
     }
 ];
-$(document).ready(function(){
+
+
+  
+
+// I need a start button with and onclick event to start timer & fist q //
+
+
+  $(document).ready(function(){
   $(":button").css("background-color", "red");
 });
 
 
+  
 
-var arrayNum = 0;
+// Here I will make a countodown that start when the stat button is hit //
+
+window.onload = function() {
+  
+  }
+
+  
+  var number = 30;
+  
+  //Trying to set it so the start button starts the timer//
+  
+  function run() {
+    intervalId = setInterval(decrement, 1000);
+  }
+  
+  function decrement() {
+  
+    number--;
+  
+    $("#Count_Down").html("<h2>" + number + "</h2>");
+  
+  
+    if (number === 0) {
+  
+      stop();
+  
+      alert("Out of Time!");
+    }
+  }
+  
+  function stop() {
+  
+    clearInterval(intervalId);
+  }
+  
+  run();
+
+ 
+
+
+// Here is where I will pull each qquestion from my array  & write to page//
+
+
+ var arrayNum = 0;
 
 
 $("<h1>").addClass("theQuestion").html(quiz[arrayNum].question).appendTo("body")
@@ -53,9 +106,11 @@ for (i = 0; i < quiz.length; i++){
   // $("#quiz").append(quiz[0].choices[i]);
 }
 
+
+  
 $(document).ready(function(){ 
 
-  $("h1").hide(5000);
+  $("h1").hide(2000).delay(1000).slideDown(1000);
 });
 
 
@@ -64,40 +119,6 @@ $(document).ready(function(){
   
 
 
-/*// Working on the Countdown Timer //
-
-var number = 30;
-
-console.log(questions[2].choices);
-
-
-//Trying to set it so the start button starts the timer//
-
-function run() {
-  intervalId = setInterval(decrement, 1000);
-}
-
-function decrement() {
-
-  number--;
-
-  $("#Count_Down").html("<h2>" + number + "</h2>");
-
-
-  if (number === 0) {
-
-    stop();
-
-    alert("Out of Time!");
-  }
-}
-
-function stop() {
-
-  clearInterval(intervalId);
-}
-
-run();
 
 // So far so good timer-wise.  Stil more to do. //
 
@@ -110,4 +131,4 @@ function myTest() {
 myTest();
   
 }
-*/
+
