@@ -61,11 +61,16 @@ var quiz = [
 function formatArray(array) {
   
     var html = "";
-    for (var q in array) { 
-		console.log(array[q]);
-	}
-  
-}
 
-// Command to format the quiz array
-formatArray(quiz);
+    html += "<label for='choices" + a + "'><b>" + array[a].question + "</b></label><br>";
+
+    for (var b in array[a].choices) { 
+			html += "<input type='radio' name='choices" + a + "' value='" + b + "'> " + array[a].choices[b] + "<br>";
+		}
+		
+		html += "<br>";
+  }
+  
+
+  
+
